@@ -22,7 +22,7 @@ public class MenuPartQUITGAME : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && main.transform.position.x < 30f)
+        if (Input.GetKeyDown(KeyCode.Escape) && main.transform.position.x < 30f && main.transform.position.x > -30f)
         {
             chosen.Play();
 #if UNITY_EDITOR
