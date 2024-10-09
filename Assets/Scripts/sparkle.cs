@@ -44,7 +44,7 @@ public class sparkle : MonoBehaviour
                 ps4.Play();
                 ps5.randomSeed = (uint)Random.Range(0, 9999999);
                 ps5.Play();
-                Invoke("Return", 1.2f);
+                Invoke("Return", 1.3f);
 
                 once = true;
             }
@@ -62,7 +62,7 @@ public class sparkle : MonoBehaviour
                 ps4.Play();
                 ps5.randomSeed = (uint)Random.Range(0, 9999999);
                 ps5.Play();
-                Invoke("Return", 1.2f);
+                Invoke("Return", 1.3f);
 
                 once = true;
             }
@@ -80,7 +80,7 @@ public class sparkle : MonoBehaviour
                 ps4.Play();
                 ps5.randomSeed = (uint)Random.Range(0, 9999999);
                 ps5.Play();
-                Invoke("Return", 1.2f);
+                Invoke("Return", 1.3f);
 
                 once = true;
             }

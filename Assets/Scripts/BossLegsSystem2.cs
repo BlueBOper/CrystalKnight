@@ -11,7 +11,7 @@ public class BossLegsSystem2 : MonoBehaviour
     public float forX, forY;
     public bool isDestroyed;
     public SpriteRenderer blood;
-    public AudioSource broken;
+    public AudioSource broken, hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +35,7 @@ public class BossLegsSystem2 : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
+            hit.Play();
             blood.sortingOrder = 12;
             bullet = collision.gameObject;
             currentHP = currentHP - damage;

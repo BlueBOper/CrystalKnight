@@ -37,7 +37,7 @@ public class BossLogic : MonoBehaviour
     float randomRecord;
     float randomNumber;
     private int counter2, counter3;
-    public AudioSource laserSound1, laserSound2, laserSound3, laserSound4, broken;
+    public AudioSource laserSound1, laserSound2, laserSound3, laserSound4, broken, forStep, fire, summon;
 
     //public float timer;
     // Start is called before the first frame update
@@ -165,6 +165,7 @@ public class BossLogic : MonoBehaviour
             if(trans1 && trans2 && trans3 == false)
             {
                 Invoke("LaserTime", 2f);
+                summon.Play();
                 trans3 = true;
             }
             else if(trans1 && trans2 && trans3 && trans4)
@@ -390,6 +391,7 @@ public class BossLogic : MonoBehaviour
     {
         if (Time.time > nextFire)
             {
+            fire.Play();
             nextFire = Time.time + fireTime;
             if(bossBigLeft != null)
             {
@@ -482,6 +484,7 @@ public class BossLogic : MonoBehaviour
             float currentDistance = Vector2.Distance(transform.position, player.position);
             if (currentDistance < attackDistance)
             {
+                forStep.Play();
                 anime.SetTrigger("Attacking");
                 isAttacking = true;
                 Invoke("CoolDown", attackCooldown);

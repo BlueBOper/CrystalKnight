@@ -8,6 +8,7 @@ public class BossLegsSystem3 : MonoBehaviour
     public GameObject bullet;
     public Animator animator;
     public SpriteRenderer bloody;
+    public AudioSource hit1, hit2;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class BossLegsSystem3 : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
+            hit2.Play();
             bloody.sortingOrder = 14;
             bullet = collision.gameObject;
             currentHP = currentHP - damage;
@@ -39,6 +41,7 @@ public class BossLegsSystem3 : MonoBehaviour
 
         if (collision.gameObject.tag == "Laser")
         {
+            hit1.Play();
             bloody.sortingOrder = 14;
             currentHP = currentHP - damage2;
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;

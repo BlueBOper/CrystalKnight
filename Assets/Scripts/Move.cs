@@ -32,7 +32,7 @@ public class Move : MonoBehaviour
     public bool begin;
     public SpriteRenderer blood1, blood2, blood3;
     public Transform hardness;
-    public AudioSource chosenSound, broken;
+    public AudioSource chosenSound, broken, hurt;
     // Start is called before the first frame update
     void Start()
     {
@@ -565,6 +565,7 @@ public class Move : MonoBehaviour
 
         if (collision.gameObject.tag == "BossBody")
         {
+            hurt.Play();
             currentHP = currentHP - bodyDamage;
             protect = true;
             bossBody.enabled = false;
@@ -596,6 +597,7 @@ public class Move : MonoBehaviour
 
         if (collision.gameObject.tag == "BossBigLeg")
         {
+            hurt.Play();
             currentHP = currentHP - bigLegDamge;
             protect = true;
             bossBody.enabled = false;
@@ -627,6 +629,7 @@ public class Move : MonoBehaviour
 
         if (collision.gameObject.tag == "BossSmallLeg")
         {
+            hurt.Play();
             currentHP = currentHP - smallLegDamage;
             protect = true;
             bossBody.enabled = false;
@@ -658,6 +661,7 @@ public class Move : MonoBehaviour
 
         if (collision.gameObject.tag == "BossBulletBig")
         {
+            hurt.Play();
             currentHP = currentHP - bigBulletDamage;
             blood1.sortingOrder = 8;
             blood2.sortingOrder = 6;
@@ -667,6 +671,7 @@ public class Move : MonoBehaviour
 
         if (collision.gameObject.tag == "BossBulletSmall")
         {
+            hurt.Play();
             currentHP = currentHP - smallBulletDamage;
             blood1.sortingOrder = 8;
             blood2.sortingOrder = 6;
@@ -676,6 +681,7 @@ public class Move : MonoBehaviour
 
         if (collision.gameObject.tag == "Laser")
         {
+            hurt.Play();
             currentHP = currentHP - laserDamage;
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             blood1.sortingOrder = 8;
