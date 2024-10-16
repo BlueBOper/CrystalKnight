@@ -32,7 +32,7 @@ public class Move : MonoBehaviour
     public bool begin;
     public SpriteRenderer blood1, blood2, blood3;
     public Transform hardness;
-    public AudioSource chosenSound, broken, hurt;
+    public AudioSource chosenSound, broken, hurt, jump, dodge;
     // Start is called before the first frame update
     void Start()
     {
@@ -206,6 +206,13 @@ public class Move : MonoBehaviour
                 hardness.position = new Vector3(-50f, 3f, 0f);
                 getready.position = new Vector3(0f, 0.5f, 0f);
                 currentHP = maxHP = 10000f;
+                p.GetComponent<BossLogic>().laserTime = 0.6f;
+                p1.GetComponent<BossLegsSystem3>().currentHP = 500f;
+                p1.GetComponent<BossLegsSystem3>().maxHP = 500f;
+                p4.GetComponent<BossLegsSystem2>().currentHP = 10f;
+                p5.GetComponent<BossLegsSystem2>().currentHP = 10f;
+                p6.GetComponent<BossLegsSystem2>().currentHP = 7f;
+                p7.GetComponent<BossLegsSystem2>().currentHP = 7f;
                 Invoke("READYFIGHT", 2f);
                 canChose = false;
                 chosen = true;
@@ -217,6 +224,13 @@ public class Move : MonoBehaviour
                 hardness.position = new Vector3(-50f, 3f, 0f);
                 getready.position = new Vector3(0f, 0.5f, 0f);
                 currentHP = maxHP = 1000f;
+                p.GetComponent<BossLogic>().laserTime = 0.5f;
+                p1.GetComponent<BossLegsSystem3>().currentHP = 600f;
+                p1.GetComponent<BossLegsSystem3>().maxHP = 600f;
+                p4.GetComponent<BossLegsSystem2>().currentHP = 12f;
+                p5.GetComponent<BossLegsSystem2>().currentHP = 12f;
+                p6.GetComponent<BossLegsSystem2>().currentHP = 9f;
+                p7.GetComponent<BossLegsSystem2>().currentHP = 9f;
                 Invoke("READYFIGHT", 2f);
                 canChose = false;
                 chosen = true;
@@ -228,6 +242,13 @@ public class Move : MonoBehaviour
                 hardness.position = new Vector3(-50f, 3f, 0f);
                 getready.position = new Vector3(0f, 0.5f, 0f);
                 currentHP = maxHP = 500f;
+                p.GetComponent<BossLogic>().laserTime = 0.4f;
+                p1.GetComponent<BossLegsSystem3>().currentHP = 700f;
+                p1.GetComponent<BossLegsSystem3>().maxHP = 700f;
+                p4.GetComponent<BossLegsSystem2>().currentHP = 15f;
+                p5.GetComponent<BossLegsSystem2>().currentHP = 15f;
+                p6.GetComponent<BossLegsSystem2>().currentHP = 10f;
+                p7.GetComponent<BossLegsSystem2>().currentHP = 10f;
                 Invoke("READYFIGHT", 2f);
                 canChose = false;
                 chosen = true;
@@ -239,6 +260,13 @@ public class Move : MonoBehaviour
                 hardness.position = new Vector3(-50f, 3f, 0f);
                 getready.position = new Vector3(0f, 0.5f, 0f);
                 currentHP = maxHP = 100f;
+                p.GetComponent<BossLogic>().laserTime = 0.3f;
+                p1.GetComponent<BossLegsSystem3>().currentHP = 1000f;
+                p1.GetComponent<BossLegsSystem3>().maxHP = 1000f;
+                p4.GetComponent<BossLegsSystem2>().currentHP = 20f;
+                p5.GetComponent<BossLegsSystem2>().currentHP = 20f;
+                p6.GetComponent<BossLegsSystem2>().currentHP = 15f;
+                p7.GetComponent<BossLegsSystem2>().currentHP = 15f;
                 Invoke("READYFIGHT", 2f);
                 canChose = false;
                 chosen = true;
@@ -264,6 +292,13 @@ public class Move : MonoBehaviour
             hardness.position = new Vector3(-50f, 3f, 0f);
             getready.position = new Vector3(0f, 0.5f, 0f);
             currentHP = maxHP = 10000f;
+            p.GetComponent<BossLogic>().laserTime = 0.6f;
+            p1.GetComponent<BossLegsSystem3>().currentHP = 500f;
+            p1.GetComponent<BossLegsSystem3>().maxHP = 500f;
+            p4.GetComponent<BossLegsSystem2>().currentHP = 10f;
+            p5.GetComponent<BossLegsSystem2>().currentHP = 10f;
+            p6.GetComponent<BossLegsSystem2>().currentHP = 7f;
+            p7.GetComponent<BossLegsSystem2>().currentHP = 7f;
             Invoke("READYFIGHT", 2f);
             canChose = false;
             chosen = true;
@@ -275,6 +310,13 @@ public class Move : MonoBehaviour
             hardness.position = new Vector3(-50f, 3f, 0f);
             getready.position = new Vector3(0f, 0.5f, 0f);
             currentHP = maxHP = 1000f;
+            p.GetComponent<BossLogic>().laserTime = 0.5f;
+            p1.GetComponent<BossLegsSystem3>().currentHP = 600f;
+            p1.GetComponent<BossLegsSystem3>().maxHP = 600f;
+            p4.GetComponent<BossLegsSystem2>().currentHP = 12f;
+            p5.GetComponent<BossLegsSystem2>().currentHP = 12f;
+            p6.GetComponent<BossLegsSystem2>().currentHP = 9f;
+            p7.GetComponent<BossLegsSystem2>().currentHP = 9f;
             Invoke("READYFIGHT", 2f);
             canChose = false;
             chosen = true;
@@ -286,6 +328,13 @@ public class Move : MonoBehaviour
             hardness.position = new Vector3(-50f, 3f, 0f);
             getready.position = new Vector3(0f, 0.5f, 0f);
             currentHP = maxHP = 500f;
+            p.GetComponent<BossLogic>().laserTime = 0.4f;
+            p1.GetComponent<BossLegsSystem3>().currentHP = 700f;
+            p1.GetComponent<BossLegsSystem3>().maxHP = 700f;
+            p4.GetComponent<BossLegsSystem2>().currentHP = 15f;
+            p5.GetComponent<BossLegsSystem2>().currentHP = 15f;
+            p6.GetComponent<BossLegsSystem2>().currentHP = 10f;
+            p7.GetComponent<BossLegsSystem2>().currentHP = 10f;
             Invoke("READYFIGHT", 2f);
             canChose = false;
             chosen = true;
@@ -297,6 +346,13 @@ public class Move : MonoBehaviour
             hardness.position = new Vector3(-50f, 3f, 0f);
             getready.position = new Vector3(0f, 0.5f, 0f);
             currentHP = maxHP = 100f;
+            p.GetComponent<BossLogic>().laserTime = 0.3f;
+            p1.GetComponent<BossLegsSystem3>().currentHP = 1000f;
+            p1.GetComponent<BossLegsSystem3>().maxHP = 1000f;
+            p4.GetComponent<BossLegsSystem2>().currentHP = 20f;
+            p5.GetComponent<BossLegsSystem2>().currentHP = 20f;
+            p6.GetComponent<BossLegsSystem2>().currentHP = 15f;
+            p7.GetComponent<BossLegsSystem2>().currentHP = 15f;
             Invoke("READYFIGHT", 2f);
             canChose = false;
             chosen = true;
@@ -341,6 +397,7 @@ public class Move : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) & onTheGround == true & canJump == true)
             {
+                jump.Play();
                 anime.SetBool("animeSpace", true);
                 playerBody.AddForce(transform.up * jumpHeight, ForceMode2D.Impulse);
                 onTheGround = false;
@@ -354,6 +411,7 @@ public class Move : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButtonDown(1))
                 {
+                    dodge.Play();
                     canDodge = false;
                     canJump = false;
                     player.enabled = false;
